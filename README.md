@@ -1,11 +1,11 @@
-# Academia Portal (Mini Project)
+# CourseREG
 
-Multithreaded TCP client-server system in C providing role-based academic management (Admin / Faculty / Student) with persistent storage and concurrency control.
+Multithreaded TCP client-server system in C providing role-based academic management (Admin / Faculty / Student) for course registration with persistent storage and concurrency control.
 
 ## Features
 - Admin: add faculty/student, toggle student activation, update username/password, list users, view courses.
 - Faculty: add/remove course, view own courses, view enrollments (with student list), change password.
-- Student: enroll / unenroll, view enrolled courses, list available courses, change password.
+- Student: enroll/unenroll, view enrolled courses, list available courses, change password.
 - Persistent storage: users, courses, enrollments saved to text files.
 - Concurrency: one thread per client, semaphore-protected saves, per-file read/write locks (`flock`).
 - Graceful shutdown via signal handler (saves data, frees memory).
@@ -14,7 +14,7 @@ Multithreaded TCP client-server system in C providing role-based academic manage
 - C (POSIX)
 - Sockets (`AF_INET`, TCP)
 - Threads (`pthread`)
-- Synchronization: `sem_t`, `flock`
+- Synchronisation: `sem_t`, `flock`
 - Dynamic arrays with `realloc`
 - Text file persistence
 
